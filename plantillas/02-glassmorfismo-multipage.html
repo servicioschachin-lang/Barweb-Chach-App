@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amber Whisky Room | Multipágina – Glasmorfismo (Bootstrap)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Hanken+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--amb:#e8a33d;--wood:#2b1608}
+  body{font-family:'Hanken Grotesk',sans-serif;color:#fbefdc;min-height:100vh;background:linear-gradient(rgba(43,22,8,.78),rgba(20,9,2,.9)),url('https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=1800&q=70') center/cover fixed}
+  h1,h2,h3,.brand{font-family:'Bodoni Moda',serif}
+  .glass{background:rgba(255,226,170,.09);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,214,140,.28);border-radius:1rem;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+  .navbar{position:sticky;top:.75rem;z-index:100;max-width:1140px;width:calc(100% - 1.5rem);margin:.75rem auto}
+  .navbar .nav-link{color:#fbefdc;opacity:.8;padding:.5rem 1rem}.navbar .nav-link:hover,.navbar .nav-link.active{color:var(--amb);opacity:1}
+  .navbar-toggler{border:1px solid rgba(255,214,140,.5)}.navbar-toggler-icon{filter:invert(1)}
+  .btn-amb{background:var(--amb);color:#2b1608;border:0;border-radius:.6rem;font-weight:600;padding:.7rem 1.7rem}.btn-amb:hover{background:#f4b95a;color:#2b1608}
+  .btn-line{border:1px solid var(--amb);color:var(--amb);border-radius:.6rem;padding:.7rem 1.7rem}.btn-line:hover{background:var(--amb);color:#2b1608}
+  .page{display:none}.page.active{display:block;animation:in .5s}@keyframes in{from{opacity:0}to{opacity:1}}
+  @media (prefers-reduced-motion:reduce){.page.active{animation:none}}
+  .amb{color:var(--amb)}
+  .menu-row{display:flex;gap:1rem;align-items:baseline;padding:.85rem 0;border-bottom:1px dashed rgba(255,214,140,.3)}
+  .menu-row .dots{flex:1}.menu-row small{display:block;opacity:.65}
+  .form-control,.form-select{background:rgba(255,255,255,.1);border:1px solid rgba(255,214,140,.35);color:#fff;border-radius:.6rem}
+  .form-control::placeholder{color:rgba(255,255,255,.6)}.form-control:focus,.form-select:focus{background:rgba(255,255,255,.18);color:#fff;box-shadow:0 0 0 .2rem rgba(232,163,61,.4)}
+  .form-select option{color:#000}
+  .soc{width:42px;height:42px;display:grid;place-items:center;color:#fbefdc;text-decoration:none;border-radius:50%}.soc:hover{background:var(--amb);color:#2b1608}
+  .cardimg{height:210px;object-fit:cover;width:100%;border-radius:1rem 1rem 0 0}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--amb);outline-offset:3px}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg glass px-3">
+  <a class="navbar-brand text-white brand fs-4" href="#inicio"><i class="bi bi-cup-fill amb"></i> Amber Room</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto py-2 py-lg-0 align-items-lg-center">
+    <li><a data-nav class="nav-link" href="#inicio">Inicio</a></li><li><a data-nav class="nav-link" href="#carta">Carta</a></li><li><a data-nav class="nav-link" href="#eventos">Catas</a></li><li><a data-nav class="nav-link" href="#contacto">Contacto</a></li>
+    <li class="ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-amb btn-sm" href="#contacto">Reservar</a></li></ul></div>
+</nav>
+<main class="container pb-5">
+  <section class="page" id="inicio"><div class="row align-items-center g-5 py-5">
+    <div class="col-lg-7"><p class="amb">Whisky bar · desde 2011</p><h1 class="display-2 fw-bold lh-1">Un trago lento, en buena compañía.</h1><p class="lead opacity-75 mt-4">Más de 200 etiquetas, madera oscura y una barra pensada para conversar.</p><div class="d-flex gap-3 flex-wrap mt-4"><a href="#carta" class="btn btn-amb">Ver la carta</a><a href="#eventos" class="btn btn-line">Próximas catas</a></div></div>
+    <div class="col-lg-5"><div class="glass p-2"><img class="w-100 rounded-3" style="height:380px;object-fit:cover" alt="Barra de whisky" src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=900&q=70"></div></div></div>
+    <div class="row g-4"><div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-award fs-2 amb"></i><h2 class="h5 mt-3">200+ etiquetas</h2><p class="opacity-75 mb-0">Escocia, Irlanda, Japón y destilerías locales.</p></div></div>
+    <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-fire fs-2 amb"></i><h2 class="h5 mt-3">Salón con chimenea</h2><p class="opacity-75 mb-0">Sillones de cuero para las noches frías.</p></div></div>
+    <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-people fs-2 amb"></i><h2 class="h5 mt-3">Barmans expertos</h2><p class="opacity-75 mb-0">Te recomendamos según tu gusto.</p></div></div></div>
+  </section>
+
+  <section class="page" id="carta"><h2 class="display-5 py-4">La carta</h2>
+    <div class="row g-4"><div class="col-lg-6"><div class="glass p-4"><h3 class="h4 amb">Whiskies</h3>
+      <div class="menu-row"><div>Highland 12 años<small>Miel y frutos secos</small></div><span class="dots"></span><strong>$9</strong></div>
+      <div class="menu-row"><div>Islay turbado<small>Humo y sal marina</small></div><span class="dots"></span><strong>$13</strong></div>
+      <div class="menu-row"><div>Bourbon reserva<small>Vainilla y roble</small></div><span class="dots"></span><strong>$10</strong></div></div></div>
+    <div class="col-lg-6"><div class="glass p-4"><h3 class="h4 amb">Cócteles</h3>
+      <div class="menu-row"><div>Old Fashioned<small>Bourbon, bitter y naranja</small></div><span class="dots"></span><strong>$12</strong></div>
+      <div class="menu-row"><div>Whisky Sour<small>Limón, clara de huevo</small></div><span class="dots"></span><strong>$11</strong></div>
+      <div class="menu-row"><div>Rob Roy<small>Escocés y vermut rojo</small></div><span class="dots"></span><strong>$12</strong></div></div></div></div>
+    <div class="row g-4 mt-1"><div class="col-md-6"><div class="glass overflow-hidden"><img class="cardimg" alt="Tabla de quesos" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h3 class="h5">Para acompañar</h3><p class="opacity-75 mb-0">Tablas de quesos, frutos secos y chocolate negro.</p></div></div></div>
+    <div class="col-md-6"><div class="glass overflow-hidden"><img class="cardimg" alt="Cóctel" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h3 class="h5">Hora ámbar</h3><p class="opacity-75 mb-0">De 18:00 a 20:00, segundo trago a mitad de precio.</p></div></div></div></div>
+  </section>
+
+  <section class="page" id="eventos"><h2 class="display-5 py-4">Catas y eventos</h2><div class="row g-4">
+    <div class="col-md-4"><div class="glass p-4 h-100"><p class="amb mb-1">Primer jueves</p><h3 class="h4">Cata guiada</h3><p class="opacity-75">Cuatro whiskies, maridaje y notas del maestro.</p><strong>$35</strong></div></div>
+    <div class="col-md-4"><div class="glass p-4 h-100"><p class="amb mb-1">Viernes</p><h3 class="h4">Jazz en vivo</h3><p class="opacity-75">Trío de jazz desde las 21:30. Entrada libre.</p><strong>Gratis</strong></div></div>
+    <div class="col-md-4"><div class="glass p-4 h-100"><p class="amb mb-1">Último sábado</p><h3 class="h4">Club de cigarros</h3><p class="opacity-75">Terraza cubierta y selección de puros.</p><strong>$25</strong></div></div></div></section>
+
+  <section class="page" id="contacto"><div class="row g-4 py-4"><div class="col-lg-5"><h2 class="display-5">Reservas</h2><p class="opacity-75 mt-3">Mesas y catas con anticipación.</p><p class="mb-1"><i class="bi bi-geo-alt amb me-2"></i>Calle Roble 21</p><p class="mb-1"><i class="bi bi-telephone amb me-2"></i>+00 456 789 012</p><p><i class="bi bi-envelope amb me-2"></i>reservas@amberroom.com</p></div>
+    <div class="col-lg-7"><form class="glass p-4" onsubmit="event.preventDefault();alert('¡Reserva enviada!')"><div class="row g-3"><div class="col-md-6"><input class="form-control" placeholder="Nombre" required aria-label="Nombre"></div><div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required aria-label="Correo"></div><div class="col-md-6"><input type="date" class="form-control" aria-label="Fecha"></div><div class="col-md-6"><select class="form-select" aria-label="Motivo"><option>Mesa</option><option>Cata guiada</option><option>Evento privado</option></select></div><div class="col-12"><button class="btn btn-amb w-100">Enviar reserva</button></div></div></form></div></div></section>
+</main>
+<footer class="container pb-4"><div class="glass p-3 px-4 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-center"><span class="brand fs-5"><i class="bi bi-cup-fill amb"></i> Amber Whisky Room</span><small class="opacity-75">© 2026 · Plantilla de demostración</small>
+<div class="d-flex gap-2"><a class="soc" aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a><a class="soc" aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a><a class="soc" aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a><a class="soc" aria-label="WhatsApp" href="#"><i class="bi bi-whatsapp"></i></a></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('.page')];
+  function route(){const h=(location.hash||'#inicio').slice(1);const p=pages.find(x=>x.id===h)||pages[0];
+    pages.forEach(x=>x.classList.toggle('active',x===p));
+    document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+p.id));
+    window.scrollTo(0,0);const c=document.querySelector('.navbar-collapse.show');if(c)bootstrap.Collapse.getOrCreateInstance(c).hide();}
+  addEventListener('hashchange',route);route();
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'bar')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bar Olivo Wine Bar | Multipágina – Minimalismo (Bootstrap)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#1b1f1c;--ink:#efece4;--line:rgba(239,236,228,.18);--wine:#b4475b}
+  body{font-family:'DM Sans',sans-serif;font-weight:300;background:var(--bg);color:var(--ink);font-size:1.05rem}
+  .serif{font-family:'DM Serif Display',serif;font-weight:400}
+  .navbar{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}
+  .navbar .nav-link{color:var(--ink);opacity:.75;padding:.5rem 0;margin:0 1rem;border-bottom:1px solid transparent;border-radius:0}.navbar .nav-link:hover,.navbar .nav-link.active{opacity:1;border-bottom-color:var(--wine)}
+  .navbar-toggler{border:0;color:var(--ink);font-size:1.7rem;padding:0}.navbar-toggler:focus{box-shadow:none;outline:2px solid var(--wine)}
+  .page{display:none}.page.active{display:block}
+  .btn-m{background:var(--ink);color:var(--bg);border-radius:0;padding:.75rem 2rem;border:1px solid var(--ink);transition:.2s;text-decoration:none;display:inline-block;font-weight:400}.btn-m:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+  .btn-o{border:1px solid var(--ink);color:var(--ink);border-radius:0;padding:.75rem 2rem;text-decoration:none;display:inline-block;transition:.2s}.btn-o:hover{background:var(--ink);color:var(--bg)}
+  .strip{height:48vh;min-height:260px;background:url('https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=1800&q=70') center/cover}
+  .band{height:320px;background:linear-gradient(rgba(27,31,28,.55),rgba(27,31,28,.55)),url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1800&q=70') center/cover;display:flex;align-items:center}
+  .rule{border-top:1px solid var(--line)}.muted{color:rgba(239,236,228,.6)}
+  .row-w{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+  .wine{color:var(--wine)}
+  .form-control,.form-select{border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);padding:.8rem 0}
+  .form-control::placeholder{color:rgba(239,236,228,.5)}.form-control:focus,.form-select:focus{box-shadow:none;border-bottom:2px solid var(--wine);background:transparent;color:var(--ink)}
+  .form-select option{color:#000}.form-control::-webkit-calendar-picker-indicator{filter:invert(1)}
+  .soc{font-size:1.25rem;color:var(--ink);text-decoration:none}.soc:hover{color:var(--wine)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--wine);outline-offset:4px}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg"><div class="container"><a class="navbar-brand serif fs-3 text-white" href="#inicio">Bar Olivo</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list"></i></button>
+  <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto py-3 py-lg-0"><li><a data-nav class="nav-link" href="#inicio">Inicio</a></li><li><a data-nav class="nav-link" href="#vinos">Vinos</a></li><li><a data-nav class="nav-link" href="#casa">La casa</a></li><li><a data-nav class="nav-link" href="#contacto">Contacto</a></li></ul></div></div></nav>
+<main>
+  <section class="page" id="inicio">
+    <div class="container py-5 my-lg-4"><div class="row"><div class="col-lg-9">
+      <h1 class="serif display-2" style="line-height:1.05">Vino bueno, sin ceremonia.</h1>
+      <p class="fs-5 muted mt-4 col-md-8 px-0">Una carta corta de vinos por copa y tapas sencillas, en una barra de madera de olivo.</p>
+      <div class="d-flex gap-3 flex-wrap mt-4"><a href="#contacto" class="btn-m">Reservar</a><a href="#vinos" class="btn-o">Ver vinos</a></div></div></div></div>
+    <div class="strip" role="img" aria-label="Copas de vino"></div>
+    <div class="container py-5"><div class="row g-5"><div class="col-md-4"><i class="bi bi-droplet-half fs-3 wine"></i><h2 class="serif h4 mt-3">20 vinos por copa</h2><p class="muted mb-0">Abiertos cada día, de pequeños productores.</p></div>
+      <div class="col-md-4"><i class="bi bi-basket fs-3 wine"></i><h2 class="serif h4 mt-3">Tapas de temporada</h2><p class="muted mb-0">Quesos, jamón, aceitunas y pan caliente.</p></div>
+      <div class="col-md-4"><i class="bi bi-lamp fs-3 wine"></i><h2 class="serif h4 mt-3">Luz baja</h2><p class="muted mb-0">Veinte plazas, pensadas para conversar.</p></div></div></div></section>
+
+  <section class="page" id="vinos"><div class="container py-5"><h2 class="serif display-5 mb-5">Vinos</h2><div class="row g-5">
+    <div class="col-lg-6"><h3 class="serif h3 wine">Tintos</h3><div class="row-w"><div><div>Rioja Crianza</div><small class="muted">Cereza y vainilla</small></div><span>$7</span></div><div class="row-w"><div><div>Garnacha joven</div><small class="muted">Fruta roja, ligero</small></div><span>$6</span></div><div class="row-w"><div><div>Malbec reserva</div><small class="muted">Intenso y especiado</small></div><span>$9</span></div></div>
+    <div class="col-lg-6"><h3 class="serif h3 wine">Blancos y burbujas</h3><div class="row-w"><div><div>Albariño</div><small class="muted">Cítrico y salino</small></div><span>$7</span></div><div class="row-w"><div><div>Verdejo</div><small class="muted">Fresco, hierba cortada</small></div><span>$6</span></div><div class="row-w"><div><div>Cava brut nature</div><small class="muted">Seco, burbuja fina</small></div><span>$8</span></div></div></div>
+    <div class="rule mt-5 pt-4"><a href="#contacto" class="btn-m">Reservar mesa</a></div></div></section>
+
+  <section class="page" id="casa"><div class="band"><div class="container"><h2 class="serif display-5 col-lg-7 px-0">Una barra, veinte sillas, buena conversación.</h2></div></div>
+    <div class="container py-5"><div class="row g-5"><div class="col-lg-6"><p>Abrimos en 2018 en una casa antigua del centro. Trabajamos con bodegas pequeñas y cambiamos la carta cada temporada.</p></div>
+    <div class="col-lg-6"><div class="row-w"><span class="muted">Horario</span><span>17:00 – 00:00</span></div><div class="row-w"><span class="muted">Plazas</span><span>20</span></div><div class="row-w"><span class="muted">Cierra</span><span>Domingo</span></div></div></div></div></section>
+
+  <section class="page" id="contacto"><div class="container py-5"><div class="row g-5"><div class="col-lg-5"><h2 class="serif display-5">Contacto</h2><p class="mt-4 mb-1">Calle Olivo 3</p><p class="mb-1">+00 818 919 020</p><p>hola@barolivo.com</p></div>
+    <div class="col-lg-7"><form onsubmit="event.preventDefault();alert('Gracias, le responderemos pronto.')"><div class="row g-4"><div class="col-md-6"><input class="form-control" placeholder="Nombre" required aria-label="Nombre"></div><div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required aria-label="Correo"></div><div class="col-md-6"><input type="date" class="form-control" aria-label="Fecha"></div><div class="col-md-6"><select class="form-select" aria-label="Personas"><option>2 personas</option><option>4 personas</option><option>6 personas</option></select></div><div class="col-12"><button class="btn-m w-100">Enviar</button></div></div></form></div></div></div></section>
+</main>
+<footer class="rule"><div class="container py-4 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-md-center"><span class="serif fs-5">Bar Olivo</span><small class="muted">© 2026 · Plantilla de demostración</small>
+  <div class="d-flex gap-4"><a class="soc" aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a><a class="soc" aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a><a class="soc" aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a><a class="soc" aria-label="WhatsApp" href="#"><i class="bi bi-whatsapp"></i></a></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('.page')];
+  function route(){const h=(location.hash||'#inicio').slice(1);const p=pages.find(x=>x.id===h)||pages[0];
+    pages.forEach(x=>x.classList.toggle('active',x===p));
+    document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+p.id));
+    window.scrollTo(0,0);const c=document.querySelector('.navbar-collapse.show');if(c)bootstrap.Collapse.getOrCreateInstance(c).hide();}
+  addEventListener('hashchange',route);route();
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'bar')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

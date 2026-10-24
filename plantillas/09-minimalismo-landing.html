@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kioku Sake Bar | Landing – Minimalismo (Tailwind)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  body{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:300;background:#f7f5f2;color:#1a1a1a}
+  .mincho{font-family:'Zen Old Mincho',serif;font-weight:500}
+  .link{background:linear-gradient(#c8372d,#c8372d) 0 100%/0 1px no-repeat;transition:background-size .3s}.link:hover{background-size:100% 1px}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #c8372d;outline-offset:4px}
+  input,select{background:transparent;border:0;border-bottom:1px solid #1a1a1a;border-radius:0;padding:.75rem 0;outline:none;width:100%}
+  input:focus,select:focus{border-bottom-color:#c8372d}
+</style>
+</head>
+<body>
+<header class="fixed top-0 inset-x-0 z-50 bg-[#f7f5f2]/90 backdrop-blur border-b border-black/10">
+  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#inicio" class="mincho text-2xl flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#c8372d] inline-block"></span>Kioku</a>
+    <ul class="hidden md:flex gap-10 text-sm"><li><a class="link" href="#inicio">Inicio</a></li><li><a class="link" href="#sake">Sake</a></li><li><a class="link" href="#espacio">Espacio</a></li><li><a class="link" href="#reservar">Reservar</a></li></ul>
+    <button id="burger" aria-label="Abrir menú" aria-expanded="false" class="md:hidden text-2xl"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-black/10 bg-[#f7f5f2]"><ul class="px-6 py-4 grid gap-4 text-lg mincho"><li><a href="#inicio">Inicio</a></li><li><a href="#sake">Sake</a></li><li><a href="#espacio">Espacio</a></li><li><a href="#reservar">Reservar</a></li></ul></div>
+</header>
+<main>
+<section id="inicio" class="pt-16 min-h-screen grid lg:grid-cols-12">
+  <div class="lg:col-span-5 flex items-center px-6 sm:px-14 py-16"><div class="max-w-sm">
+    <p class="text-sm text-neutral-500">Sake bar · 12 asientos</p>
+    <h1 class="mincho text-5xl sm:text-6xl leading-[1.12] mt-4">Un vaso, una historia.</h1>
+    <p class="mt-6 leading-relaxed text-neutral-600">Selección breve de sake y platos pequeños, servidos con calma.</p>
+    <div class="mt-10 flex items-center gap-8"><a href="#reservar" class="bg-[#1a1a1a] text-white px-8 py-3 text-sm hover:bg-[#c8372d] transition">Reservar</a><a href="#sake" class="link text-sm">Ver sake</a></div></div></div>
+  <div class="lg:col-span-7 h-[55vh] lg:h-auto"><img alt="Barra de sake" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=1400&q=70"></div>
+</section>
+
+<section id="sake" class="max-w-4xl mx-auto px-6 py-24">
+  <h2 class="mincho text-4xl">Sake</h2>
+  <ul class="mt-10 divide-y divide-black/15 border-y border-black/15">
+    <li class="py-5 flex justify-between gap-6"><div><h3 class="mincho text-xl">Junmai</h3><p class="text-sm text-neutral-500">Seco, notas de arroz y hierba. Frío o tibio.</p></div><span>$9</span></li>
+    <li class="py-5 flex justify-between gap-6"><div><h3 class="mincho text-xl">Ginjo</h3><p class="text-sm text-neutral-500">Aromático, frutal y ligero.</p></div><span>$12</span></li>
+    <li class="py-5 flex justify-between gap-6"><div><h3 class="mincho text-xl">Daiginjo</h3><p class="text-sm text-neutral-500">Fino y delicado, de pulido profundo.</p></div><span>$18</span></li>
+    <li class="py-5 flex justify-between gap-6"><div><h3 class="mincho text-xl">Nigori</h3><p class="text-sm text-neutral-500">Turbio y cremoso, ligeramente dulce.</p></div><span>$10</span></li>
+  </ul>
+</section>
+
+<section id="espacio" class="relative h-[65vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1800&q=70')">
+  <div class="px-6 max-w-2xl"><p class="mincho text-3xl sm:text-5xl leading-snug">Doce asientos. Una sola barra. Ninguna prisa.</p><p class="mt-5 text-white/75">Martes a sábado · 19:00 – 00:00</p></div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-12">
+  <div><i class="bi bi-cup text-2xl"></i><h2 class="mincho text-2xl mt-4">Servicio sencillo</h2><p class="mt-2 text-neutral-600 leading-relaxed">Te explicamos cada sake y lo servimos a su temperatura.</p></div>
+  <div><i class="bi bi-egg text-2xl"></i><h2 class="mincho text-2xl mt-4">Platos pequeños</h2><p class="mt-2 text-neutral-600 leading-relaxed">Edamame, tempura y onigiri para acompañar.</p></div>
+  <div><i class="bi bi-moon text-2xl"></i><h2 class="mincho text-2xl mt-4">Ambiente tranquilo</h2><p class="mt-2 text-neutral-600 leading-relaxed">Música baja y luz cálida, sin pantallas.</p></div>
+</section>
+
+<section id="reservar" class="max-w-3xl mx-auto px-6 pb-24">
+  <h2 class="mincho text-4xl">Reservar</h2>
+  <form class="grid sm:grid-cols-2 gap-x-10 gap-y-6 mt-10" onsubmit="event.preventDefault();alert('Gracias, le responderemos pronto.')">
+    <input required aria-label="Nombre" placeholder="Nombre"><input required type="email" aria-label="Correo" placeholder="Correo">
+    <input type="date" aria-label="Fecha"><select aria-label="Personas"><option>1 persona</option><option>2 personas</option><option>3-4 personas</option></select>
+    <button class="sm:col-span-2 bg-[#1a1a1a] text-white py-3 text-sm hover:bg-[#c8372d] transition mt-4">Enviar solicitud</button></form>
+</section>
+</main>
+<footer class="border-t border-black/10"><div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-6 items-center justify-between text-sm">
+  <p class="mincho text-xl flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#c8372d] inline-block"></span>Kioku Sake Bar</p><p class="text-neutral-500">Calle Tsuki 5 · +00 515 616 717 · hola@kioku.com</p>
+  <div class="flex gap-5 text-lg"><a aria-label="Facebook" class="hover:text-[#c8372d]" href="#"><i class="bi bi-facebook"></i></a><a aria-label="Instagram" class="hover:text-[#c8372d]" href="#"><i class="bi bi-instagram"></i></a><a aria-label="Pinterest" class="hover:text-[#c8372d]" href="#"><i class="bi bi-pinterest"></i></a><a aria-label="WhatsApp" class="hover:text-[#c8372d]" href="#"><i class="bi bi-whatsapp"></i></a></div></div></footer>
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'bar')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

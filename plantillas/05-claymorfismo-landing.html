@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piña Pop Tiki Bar | Landing – Claymorfismo (Tailwind)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  :root{--coral:#ff7a6b;--teal:#3ed6c3;--sun:#ffd34d;--leaf:#8fdc6a;--ink:#16424a;--sand:#fff4dc}
+  body{font-family:'Nunito',sans-serif;background:var(--sand);color:var(--ink)}
+  .lilita{font-family:'Lilita One',sans-serif;letter-spacing:.01em}
+  .clay{border-radius:2rem;box-shadow:12px 12px 24px rgba(22,66,74,.2),inset -8px -8px 14px rgba(22,66,74,.14),inset 8px 8px 14px rgba(255,255,255,.7)}
+  .clay-sm{border-radius:1.25rem;box-shadow:6px 6px 12px rgba(22,66,74,.22),inset -4px -4px 8px rgba(22,66,74,.14),inset 4px 4px 8px rgba(255,255,255,.65);transition:.2s}
+  .clay-sm:hover{transform:translateY(-3px) rotate(-1deg)}.clay-sm:active{transform:translateY(1px)}
+  .c-coral{background:var(--coral)}.c-teal{background:var(--teal)}.c-sun{background:var(--sun)}.c-leaf{background:var(--leaf)}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  .sway{animation:sw 4s ease-in-out infinite}@keyframes sw{50%{transform:rotate(3deg) translateY(-6px)}}
+  @media (prefers-reduced-motion:reduce){.sway{animation:none}}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-50 px-4 pt-4">
+  <nav class="clay c-sun max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="#inicio" class="lilita text-2xl"><i class="bi bi-brightness-high-fill text-orange-500"></i> Piña Pop</a>
+    <ul class="hidden md:flex gap-3 font-bold">
+      <li><a class="clay-sm c-coral text-white px-5 py-2 inline-block" href="#inicio">Inicio</a></li><li><a class="clay-sm c-teal px-5 py-2 inline-block" href="#tragos">Tragos</a></li>
+      <li><a class="clay-sm c-leaf px-5 py-2 inline-block" href="#happy">Happy hour</a></li><li><a class="clay-sm bg-white px-5 py-2 inline-block" href="#reservar">Reservar</a></li>
+    </ul>
+    <button id="burger" aria-label="Abrir menú" aria-expanded="false" class="md:hidden clay-sm c-coral text-white w-11 h-11 text-xl"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-3 clay c-teal p-5"><ul class="grid gap-3 text-center font-bold">
+    <li><a class="clay-sm c-sun py-3 block" href="#inicio">Inicio</a></li><li><a class="clay-sm c-coral text-white py-3 block" href="#tragos">Tragos</a></li><li><a class="clay-sm c-leaf py-3 block" href="#happy">Happy hour</a></li><li><a class="clay-sm bg-white py-3 block" href="#reservar">Reservar</a></li></ul></div>
+</header>
+
+<main>
+<section id="inicio" class="max-w-6xl mx-auto px-6 py-12 lg:py-16 grid lg:grid-cols-2 gap-10 items-center">
+  <div>
+    <span class="clay-sm c-leaf px-4 py-1.5 inline-block text-sm font-bold"><i class="bi bi-emoji-sunglasses"></i> Bar tiki · terraza abierta</span>
+    <h1 class="lilita mt-5 text-5xl sm:text-7xl leading-[1.02]">Vacaciones servidas en vaso.</h1>
+    <p class="mt-5 text-lg font-semibold opacity-80 max-w-md">Tragos tropicales, sombrillitas y música de playa todos los días.</p>
+    <div class="mt-8 flex flex-wrap gap-4"><a href="#reservar" class="clay-sm c-coral text-white px-8 py-4 font-extrabold text-lg">Reservar</a><a href="#tragos" class="clay-sm c-sun px-8 py-4 font-extrabold text-lg">Ver tragos</a></div>
+  </div>
+  <div class="relative"><div class="clay c-teal p-4 sway"><img alt="Cóctel tropical" class="w-full h-80 sm:h-96 object-cover" style="border-radius:1.5rem" src="https://images.unsplash.com/photo-1575444758702-4a6b9222336e?auto=format&fit=crop&w=1000&q=70"></div>
+  <div class="clay-sm c-sun absolute -bottom-5 -left-3 px-5 py-3 font-extrabold">2x1 de 17 a 19 h</div></div>
+</section>
+
+<section id="tragos" class="max-w-6xl mx-auto px-6 py-14">
+  <h2 class="lilita text-4xl sm:text-5xl text-center">Los favoritos</h2>
+  <div class="grid md:grid-cols-3 gap-8 mt-10">
+    <article class="clay bg-white p-4"><img loading="lazy" alt="Piña colada" class="h-52 w-full object-cover" style="border-radius:1.4rem" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=70"><div class="flex justify-between items-center mt-4"><h3 class="lilita text-2xl">Piña Colada</h3><span class="clay-sm c-sun px-3 py-1 font-extrabold">$9</span></div><p class="text-sm opacity-75 mt-1">Ron, coco y piña en su propia piña.</p></article>
+    <article class="clay bg-white p-4"><img loading="lazy" alt="Mai Tai" class="h-52 w-full object-cover" style="border-radius:1.4rem" src="https://images.unsplash.com/photo-1566633806327-68e152aaf26d?auto=format&fit=crop&w=800&q=70"><div class="flex justify-between items-center mt-4"><h3 class="lilita text-2xl">Mai Tai</h3><span class="clay-sm c-sun px-3 py-1 font-extrabold">$10</span></div><p class="text-sm opacity-75 mt-1">Ron añejo, almendra y lima.</p></article>
+    <article class="clay bg-white p-4"><img loading="lazy" alt="Margarita" class="h-52 w-full object-cover" style="border-radius:1.4rem" src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=70"><div class="flex justify-between items-center mt-4"><h3 class="lilita text-2xl">Blue Lagoon</h3><span class="clay-sm c-sun px-3 py-1 font-extrabold">$9</span></div><p class="text-sm opacity-75 mt-1">Vodka, curaçao azul y limonada.</p></article>
+  </div>
+</section>
+
+<section id="happy" class="py-14 c-teal" style="background:linear-gradient(#4fe0cd,#9ff0e3)">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="clay c-sun p-6 text-center"><i class="bi bi-clock-history text-4xl"></i><h3 class="lilita text-xl mt-2">Happy hour</h3><p class="text-sm font-semibold">17:00 a 19:00</p></div>
+    <div class="clay c-coral p-6 text-center text-white"><i class="bi bi-music-note-beamed text-4xl"></i><h3 class="lilita text-xl mt-2">Música</h3><p class="text-sm font-semibold">Reggae y salsa</p></div>
+    <div class="clay c-leaf p-6 text-center"><i class="bi bi-balloon-heart text-4xl"></i><h3 class="lilita text-xl mt-2">Cumpleaños</h3><p class="text-sm font-semibold">Postre gratis</p></div>
+    <div class="clay bg-white p-6 text-center"><i class="bi bi-people text-4xl"></i><h3 class="lilita text-xl mt-2">Grupos</h3><p class="text-sm font-semibold">Mesas hasta 12</p></div>
+  </div>
+</section>
+
+<section id="reservar" class="max-w-4xl mx-auto px-6 py-16"><div class="clay c-coral p-8 sm:p-12 text-white">
+  <h2 class="lilita text-4xl">¡Guarda tu mesa!</h2>
+  <form class="grid sm:grid-cols-2 gap-4 mt-6 text-[#16424a]" onsubmit="event.preventDefault();alert('¡Reserva enviada!')">
+    <input required aria-label="Nombre" placeholder="Tu nombre" class="clay-sm bg-white px-5 py-3 outline-none"><input required type="email" aria-label="Correo" placeholder="Tu correo" class="clay-sm bg-white px-5 py-3 outline-none">
+    <input type="date" aria-label="Fecha" class="clay-sm bg-white px-5 py-3 outline-none"><select aria-label="Personas" class="clay-sm bg-white px-5 py-3 outline-none"><option>2 personas</option><option>4 personas</option><option>8+ personas</option></select>
+    <button class="clay-sm c-sun py-3 font-extrabold text-lg sm:col-span-2">Reservar</button></form></div></section>
+</main>
+<footer class="max-w-6xl mx-auto px-6 pb-10 flex flex-col md:flex-row gap-6 items-center justify-between">
+  <p class="lilita text-2xl"><i class="bi bi-brightness-high-fill text-orange-500"></i> Piña Pop Tiki Bar</p><p class="text-sm opacity-75 font-semibold">Paseo Coco 3 · +00 999 111 333 · hola@pinapop.com</p>
+  <div class="flex gap-3"><a aria-label="Facebook" href="#" class="clay-sm c-coral text-white w-11 h-11 grid place-items-center"><i class="bi bi-facebook"></i></a><a aria-label="Instagram" href="#" class="clay-sm c-sun w-11 h-11 grid place-items-center"><i class="bi bi-instagram"></i></a><a aria-label="TikTok" href="#" class="clay-sm c-teal w-11 h-11 grid place-items-center"><i class="bi bi-tiktok"></i></a><a aria-label="WhatsApp" href="#" class="clay-sm c-leaf w-11 h-11 grid place-items-center"><i class="bi bi-whatsapp"></i></a></div>
+</footer>
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'bar')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>
